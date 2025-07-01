@@ -66,12 +66,12 @@ export const getAppId = () => {
         app_id = user_app_id;
     } else if (isStaging()) {
         window.localStorage.removeItem('config.default_app_id');
-        app_id = is_bot ? 19112 : domain_app_ids[current_domain as keyof typeof domain_app_ids] || 16303; // it's being used in endpoint chrome extension - please do not remove
+        app_id = is_bot ? 19112 : domain_app_ids[current_domain as keyof typeof domain_app_ids] || 82976; // it's being used in endpoint chrome extension - please do not remove
     } else if (/localhost/i.test(window.location.hostname)) {
-        app_id = 36300;
+        app_id = 82976;
     } else {
         window.localStorage.removeItem('config.default_app_id');
-        app_id = is_bot ? 19111 : domain_app_ids[current_domain as keyof typeof domain_app_ids] || 82976;
+        app_id = is_bot ? 82976 : domain_app_ids[current_domain as keyof typeof domain_app_ids] || 82976;
     }
 
     return app_id;
